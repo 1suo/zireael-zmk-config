@@ -13,15 +13,9 @@
 #define RSE 2
 #define ADJ 3
 
-&lt {
-    quick_tap_ms = <300>;
-    tapping-term-ms = <300>;
-};
+&lt { quick_tap_ms = <200>; };
 
-&mt {
-    quick_tap_ms = <300>;
-    tapping-term-ms = <300>;
-};
+&mt { quick_tap_ms = <200>; };
 
 / {
     chosen {
@@ -56,7 +50,7 @@
         base {
             bindings = <
 &kp GRAVE  &kp Q       &kp W       &kp F        &kp P        &kp B      &kp J      &kp L        &kp U        &kp Y       &kp SQT     &kp LBKT
-&kp ESC    &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M      &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O  &kp SEMI
+&kp ESC    &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M      &mt RSHFT N  &mt RSHFT E  &mt RALT I  &mt RGUI O  &kp SEMI
 &kp BSLH   &kp Z       &kp X       &kp C        &kp D        &kp V      &kp K      &kp H        &kp COMMA    &kp PERIOD  &kp SLASH   &kp RBKT
                                    &lt 3 TAB    &lt 2 SPACE  &lt 1 RET  &lt 1 ESC  &lt 2 BSPC   &lt 3 DEL
             >;
@@ -67,7 +61,7 @@
 &trans     &kp PLUS       &kp F7       &kp F8        &kp F9        &kp F12  &trans  &kp PRCNT       &kp CARET     &kp AMPS       &kp DLLR       &trans
 &kp EQUAL  &mt LGUI LGUI  &mt LALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp F11  &trans  &mt RSHFT EXCL  &mt RCTRL AT  &mt RALT HASH  &mt RGUI STAR  &trans
 &trans     &kp MINUS      &kp F1       &kp F2        &kp F3        &kp F10  &trans  &trans          &kp LPAR      &kp RPAR       &kp UNDER      &trans
-                                       &trans        &lt 4 SPACE   &trans   &trans  &lt 4 BSPC      &trans
+                                       &lt 2 TAB     &trans        &trans   &trans  &trans          &lt 2 DEL
             >;
         };
 
@@ -76,7 +70,7 @@
 &trans  &kp KP_PLUS     &kp KP_N7       &kp KP_N8        &kp KP_N9        &trans     &trans     &kp HOME        &kp END       &kp PG_UP       &kp CAPS              &kp INS
 &trans  &mt LGUI KP_N0  &mt LALT KP_N4  &mt LCTRL KP_N5  &mt LSHFT KP_N6  &trans     &trans     &mt RSHFT DOWN  &mt RCTRL UP  &mt RALT PG_DN  &mt RGUI KP_MULTIPLY  &kp PSCRN
 &trans  &kp KP_MINUS    &kp KP_N1       &kp KP_N2        &kp KP_N3        &trans     &trans     &kp LEFT        &kp RIGHT     &kp KP_DOT      &kp KP_DIVIDE         &kp K_MENU
-                                        &trans           &trans           &lt 4 RET  &lt 4 ESC  &trans          &trans
+                                        &trans           &trans           &lt 2 RET  &lt 2 ESC  &trans          &trans
             >;
         };
 
