@@ -12,9 +12,6 @@
   #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2
 #endif
 
-/* Create a hold-tap "HRM" type that accepts a hold binding and a tap binding
-   as arguments when used in the keymap (e.g., &hml LGUI A).  This relies only
-   on ZMK core hold-tap behavior. */
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS)                                 \
   ZMK_HOLD_TAP(NAME, bindings = <HOLD>, <TAP>; flavor = "balanced";            \
                tapping-term-ms = <280>; quick-tap-ms = <QUICK_TAP_MS>;         \
