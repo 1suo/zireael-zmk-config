@@ -14,18 +14,20 @@
 #define ADJ 3
 
 /* Homerow mods configuration */
+
 #define QUICK_TAP_MS 175
 
 // Key position groups for Zireael (36-key layout)
 // Left side: rows 0-2, positions 0-5 (top), 12-17 (home), 24-29 (bottom)
 // Right side: rows 0-2, positions 6-11 (top), 18-23 (home), 30-35 (bottom)
 // Thumbs: 36-38 (left), 39-41 (right)
+
 #define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29  // Left hand keys
 #define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35  // Right hand keys
 #define THUMBS 36 37 38 39 40 41  // All thumb keys
 
-&lt { 
-    quick_tap_ms = <200>; 
+&lt {
+    quick_tap_ms = <200>;
     flavor = "balanced";
 };
 
@@ -44,10 +46,12 @@
 
     behaviors {
         // Left-hand homerow mods
+
         hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
+
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <QUICK_TAP_MS>;
@@ -57,10 +61,12 @@
         };
 
         // Right-hand homerow mods
+
         hmr: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
+
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <QUICK_TAP_MS>;
@@ -91,28 +97,28 @@
 
         base {
             bindings = <
-&kp GRAVE  &kp Q       &kp W       &kp F         &kp P         &kp B      &kp J      &kp L         &kp U         &kp Y        &kp SQT     &kp LBKT
-&kp ESC    &hml LGUI A &hml LALT R &hml LCTRL S  &hml LSHFT T  &kp G      &kp M      &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I  &hmr RGUI O &kp SEMI
-&kp BSLH   &kp Z       &kp X       &kp C         &kp D         &kp V      &kp K      &kp H         &kp COMMA     &kp PERIOD   &kp SLASH   &kp RBKT
-                                   &lt 3 TAB     &lt 2 SPACE   &lt 1 RET  &lt 1 ESC  &lt 2 BSPC    &lt 3 DEL
+&kp GRAVE  &kp Q        &kp W        &kp F         &kp P         &kp B      &kp J      &kp L         &kp U         &kp Y        &kp SQT      &kp LBKT
+&kp ESC    &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T  &kp G      &kp M      &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I  &hmr RGUI O  &kp SEMI
+&kp BSLH   &kp Z        &kp X        &kp C         &kp D         &kp V      &kp K      &kp H         &kp COMMA     &kp PERIOD   &kp SLASH    &kp RBKT
+                                     &lt 3 TAB     &lt 2 SPACE   &lt 1 RET  &lt 1 ESC  &lt 2 BSPC    &lt 3 DEL
             >;
         };
 
         lower_layer {
             bindings = <
-&trans     &kp PLUS       &kp F7       &kp F8        &kp F9        &kp F12  &trans  &kp PRCNT       &kp CARET     &kp AMPS       &kp DLLR       &trans
-&kp EQUAL  &mt LGUI LGUI  &mt LALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp F11  &trans  &mt RSHFT EXCL  &mt RCTRL AT  &mt RALT HASH  &mt RGUI STAR  &trans
-&trans     &kp MINUS      &kp F1       &kp F2        &kp F3        &kp F10  &trans  &trans          &kp LPAR      &kp RPAR       &kp UNDER      &trans
-                                       &lt 2 TAB     &trans        &trans   &trans  &trans          &lt 2 DEL
+&trans     &kp PLUS        &kp F7        &kp F8         &kp F9         &kp F12  &trans  &kp PRCNT        &kp CARET      &kp AMPS        &kp DLLR        &trans
+&kp EQUAL  &hml LGUI LGUI  &hml LALT F4  &hml LCTRL F5  &hml LSHFT F6  &kp F11  &trans  &hmr RSHFT EXCL  &hmr RCTRL AT  &hmr RALT HASH  &hmr RGUI STAR  &trans
+&trans     &kp MINUS       &kp F1        &kp F2         &kp F3         &kp F10  &trans  &trans           &kp LPAR       &kp RPAR        &kp UNDER       &trans
+                                         &lt 2 TAB      &trans         &trans   &trans  &trans           &lt 2 DEL
             >;
         };
 
         raise_layer {
             bindings = <
-&trans  &kp KP_PLUS     &kp KP_N7       &kp KP_N8        &kp KP_N9        &trans     &trans     &kp HOME        &kp END       &kp PG_UP       &kp CAPS              &kp INS
-&trans  &mt LGUI KP_N0  &mt LALT KP_N4  &mt LCTRL KP_N5  &mt LSHFT KP_N6  &trans     &trans     &mt RSHFT DOWN  &mt RCTRL UP  &mt RALT PG_DN  &mt RGUI KP_MULTIPLY  &kp PSCRN
-&trans  &kp KP_MINUS    &kp KP_N1       &kp KP_N2        &kp KP_N3        &trans     &trans     &kp LEFT        &kp RIGHT     &kp KP_DOT      &kp KP_DIVIDE         &kp K_MENU
-                                        &trans           &trans           &lt 2 RET  &lt 2 ESC  &trans          &trans
+&trans  &kp KP_PLUS   &kp N7        &kp N8         &kp N9         &trans     &trans     &kp HOME         &kp END        &kp PG_UP        &kp CAPS               &kp INS
+&trans  &hml LGUI N0  &hml LALT N4  &hml LCTRL N5  &hml LSHFT N6  &trans     &trans     &hmr RSHFT DOWN  &hmr RCTRL UP  &hmr RALT PG_DN  &hmr RGUI KP_MULTIPLY  &kp PSCRN
+&trans  &kp KP_MINUS  &kp N1        &kp N2         &kp N3         &trans     &trans     &kp LEFT         &kp RIGHT      &kp KP_DOT       &kp KP_DIVIDE          &kp K_MENU
+                                    &trans         &trans         &lt 2 RET  &lt 2 ESC  &trans           &trans
             >;
         };
 
