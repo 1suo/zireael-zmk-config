@@ -26,21 +26,14 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        spc1 {
-            bindings = <&none>;
-            key-positions = <>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
-        TMUX0: spc1 {
+        TMUX0: TMUX0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(B) &kp N0>;
-            label = "SPC1";
+            label = "TMUX0";
         };
 
         TMUX1: TMUX1 {
@@ -58,7 +51,7 @@
             bindings = <
 &kp GRAVE  &kp Q       &kp W       &kp F        &kp P        &kp B      &kp J      &kp L        &kp U        &kp Y       &kp SQT     &kp LBKT
 &kp ESC    &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M      &mt RSHFT N  &mt RSHFT E  &mt RALT I  &mt RGUI O  &kp SEMI
-&kp BSLH   &kp Z       &kp X       &kp C        &kp D        &kp W      &kp K      &kp H        &kp COMMA    &kp PERIOD  &kp SLASH   &kp RBKT
+&kp BSLH   &kp Z       &kp X       &kp C        &kp D        &kp V      &kp K      &kp H        &kp COMMA    &kp PERIOD  &kp SLASH   &kp RBKT
                                    &lt 3 TAB    &lt 2 SPACE  &lt 1 RET  &lt 1 ESC  &lt 2 BSPC   &lt 3 DEL
             >;
         };
