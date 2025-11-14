@@ -95,34 +95,34 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base {
+        black_layer {
             bindings = <
-&kp GRAVE  &kp Q        &kp W        &kp F         &kp P         &kp B      &kp J      &kp L         &kp U         &kp Y        &kp SQT      &kp LBKT
-&kp ESC    &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T  &kp G      &kp M      &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I  &hmr RGUI O  &kp SEMI
-&kp BSLH   &kp Z        &kp X        &kp C         &kp D         &kp V      &kp K      &kp H         &kp COMMA     &kp PERIOD   &kp SLASH    &kp RBKT
-                                     &lt 3 TAB     &lt 2 SPACE   &lt 1 RET  &lt 1 ESC  &lt 2 BSPC    &lt 3 DEL
+&kp LBKT  &kp Q        &kp W        &kp F         &kp V         &kp B      &kp J      &kp L         &kp U         &kp Y        &kp K        &kp SEMI
+&kp TAB   &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T  &kp G      &kp M      &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I  &hmr RGUI O  &kp SQT
+&kp RBKT  &kp Z        &kp X        &kp C         &kp D         &kp GRAVE  &kp DEL    &kp H         &kp COMMA     &kp P        &kp SLASH    &kp BSLH
+                                    &lt 3 MINUS   &lt 2 SPACE   &lt 1 RET  &lt 1 ESC  &lt 2 BSPC    &lt 3 DOT
             >;
         };
 
-        lower_layer {
+        red_layer {
             bindings = <
-&trans     &kp PLUS        &kp F7        &kp F8         &kp F9         &kp F12  &trans  &kp PRCNT        &kp CARET      &kp AMPS        &kp DLLR        &trans
-&kp EQUAL  &hml LGUI LGUI  &hml LALT F4  &hml LCTRL F5  &hml LSHFT F6  &kp F11  &trans  &hmr RSHFT EXCL  &hmr RCTRL AT  &hmr RALT HASH  &hmr RGUI STAR  &trans
-&trans     &kp MINUS       &kp F1        &kp F2         &kp F3         &kp F10  &trans  &trans           &kp LPAR       &kp RPAR        &kp UNDER       &trans
-                                         &lt 2 TAB      &trans         &trans   &trans  &trans           &lt 2 DEL
+&trans  &kp PLUS        &kp F7        &kp F8         &kp F9         &kp F12  &trans  &kp PRCNT        &kp CARET                    &kp AMPS        &kp DLLR        &trans
+&trans  &hml LGUI LGUI  &hml LALT F4  &hml LCTRL F5  &hml LSHFT F6  &kp F11  &trans  &hmr RSHFT EXCL  &hmr RCTRL LEFT_PARENTHESIS  &hmr RALT RPAR  &hmr RGUI STAR  &trans
+&trans  &kp MINUS       &kp F1        &kp F2         &kp F3         &kp F10  &trans  &kp EQUAL        &kp AT                       &kp HASH        &kp UNDER       &trans
+                                      &lt 2 MINUS    &trans         &trans   &trans  &trans           &lt 2 DOT
             >;
         };
 
-        raise_layer {
+        blue_layer {
             bindings = <
-&trans  &kp KP_PLUS   &kp N7        &kp N8         &kp N9         &trans     &trans     &kp HOME         &kp END        &kp PG_UP        &kp CAPS               &kp INS
-&trans  &hml LGUI N0  &hml LALT N4  &hml LCTRL N5  &hml LSHFT N6  &trans     &trans     &hmr RSHFT DOWN  &hmr RCTRL UP  &hmr RALT PG_DN  &hmr RGUI KP_MULTIPLY  &kp PSCRN
-&trans  &kp KP_MINUS  &kp N1        &kp N2         &kp N3         &trans     &trans     &kp LEFT         &kp RIGHT      &kp KP_DOT       &kp KP_DIVIDE          &kp K_MENU
-                                    &trans         &trans         &lt 2 RET  &lt 2 ESC  &trans           &trans
+&trans  &kp KP_PLUS   &kp N7        &kp N8         &kp N9         &trans     &kp HOME        &kp PG_DN        &kp PG_UP      &kp END                &kp PRINTSCREEN        &kp INS
+&trans  &hml LGUI N0  &hml LALT N4  &hml LCTRL N5  &hml LSHFT N6  &trans     &kp LEFT_ARROW  &hmr RSHFT DOWN  &hmr RCTRL UP  &hmr RALT RIGHT_ARROW  &hmr RGUI KP_MULTIPLY  &kp CAPS
+&trans  &kp KP_MINUS  &kp N1        &kp N2         &kp N3         &trans     &trans          &trans           &trans         &trans                 &kp KP_DIVIDE          &kp K_MENU
+                                    &kp KP_MINUS   &trans         &lt 2 RET  &lt 2 ESC       &trans           &kp KP_DOT
             >;
         };
 
-        macro_layer {
+        white_layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &TMUX0  &trans
@@ -131,7 +131,7 @@
             >;
         };
 
-        adjust_layer {
+        gray_layer {
             bindings = <
 &bootloader  &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &bootloader
 &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
