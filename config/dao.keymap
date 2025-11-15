@@ -97,10 +97,10 @@
 
         black_layer {
             bindings = <
-&kp LBKT   &kp Q        &kp W        &kp F         &kp V         &kp B          &kp J            &kp L         &kp U         &kp Y        &kp K        &kp SEMI
-&kp MINUS  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T  &kp G          &kp M            &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I  &hmr RGUI O  &kp SQT
-&kp RBKT   &kp Z        &kp X        &kp C         &kp D         &kp GRAVE      &kp BSLH         &kp H         &kp COMMA     &kp P        &kp DOT      &kp FSLH
-                                     &lt 2 TAB     &lt 1 SPACE   &mt LSHFT ESC  &mt RSHFT ENTER  &lt 1 BSPC    &lt 2 DEL
+&kp LBKT   &kp Q        &kp W        &kp F         &kp V         &kp B            &kp J          &kp L         &kp U         &kp Y        &kp K        &kp SEMI
+&kp MINUS  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T  &kp G            &kp M          &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I  &hmr RGUI O  &kp SQT
+&kp RBKT   &kp Z        &kp X        &kp C         &kp D         &kp GRAVE        &kp BSLH       &kp H         &kp COMMA     &kp P        &kp DOT      &kp FSLH
+                                     &lt 2 TAB     &lt 1 SPACE   &mt LSHFT ENTER  &mt RSHFT ESC  &lt 1 BSPC    &lt 2 DEL
             >;
         };
 
