@@ -100,7 +100,7 @@
 &kp LBKT  &kp B        &kp L       &kp D         &kp C          &kp V      &kp K      &kp Y         &kp O         &kp U        &kp J        &kp SEMI
 &kp CAPS  &hml LGUI N  &mt LALT R  &hml LCTRL T  &hml LSHIFT S  &kp G      &kp P      &hmr RSHFT H  &hmr RCTRL A  &hmr RALT E  &hmr RGUI I  &kp DOT
 &kp RBKT  &kp Q        &kp X       &kp M         &kp W          &kp GRAVE  &kp ESC    &kp F         &kp SQT       &kp Z        &kp COMMA    &kp FSLH
-                                   &lt 4 TAB     &kp SPACE      &lt 1 RET  &sk RSHFT  &lt 1 BSPC    &lt 4 DEL
+                                   &lt 4 TAB     &lt 1 SPACE    &lt 1 RET  &sk RSHFT  &lt 1 BSPC    &lt 4 DEL
             >;
         };
 
